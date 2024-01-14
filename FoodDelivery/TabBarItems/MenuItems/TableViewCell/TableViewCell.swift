@@ -64,11 +64,7 @@ class TableViewCell: UITableViewCell {
         let imageUrl = URL(string: model.imageURL)
         imagePreview.sd_setImage(with: imageUrl,
                                  placeholderImage: UIImage(systemName: ""))
-        
-//        let mobuttText = "\(model.abv)г."
-//        selectButton.setTitle(mobuttText,
-//                              for: .normal)
-        buttonLabel.text = "\(model.abv)г."
+        buttonLabel.text = "free :)"
     }
 // MARK: - init
     override init(style: UITableViewCell.CellStyle,

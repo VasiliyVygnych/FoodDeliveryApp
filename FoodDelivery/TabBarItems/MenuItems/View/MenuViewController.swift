@@ -121,14 +121,14 @@ class MenuViewController: UIViewController {
             make.right.equalToSuperview()
         }
         stackView.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(104)
+            make.top.equalToSuperview().inset(100)
             make.width.equalToSuperview()
         }
         collectionBanners.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.width.equalToSuperview()
-//            make.height.lessThanOrEqualTo(180)
-            make.height.equalTo(180)
+//            make.height.lessThanOrEqualTo(160)
+            make.height.equalTo(160)
         }
         collectionСategories.snp.makeConstraints { make in
             make.top.equalTo(collectionBanners.snp.bottom)
@@ -136,7 +136,7 @@ class MenuViewController: UIViewController {
             make.height.equalTo(70)
         }
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(collectionСategories.snp.bottom).inset(-5)
+            make.top.equalTo(collectionСategories.snp.bottom).inset(-15)
             make.width.equalToSuperview()
             make.bottom.equalToSuperview()
         }
@@ -183,9 +183,8 @@ extension MenuViewController: UITableViewDelegate,
             self.tableView.insertRows(at: [indexPath],
                                       with: .fade)
         }
-        
-        
-        
+    
+//MARK: - shows & hides banner
         if indexPath.row == 4 {
             stackViews.forEach { buttom in
                 UIView.animate(withDuration: 0.2) {
@@ -194,6 +193,5 @@ extension MenuViewController: UITableViewDelegate,
                 }
             }
         }
-        
     }
 }
